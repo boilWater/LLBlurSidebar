@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetViewController">
@@ -11,9 +12,42 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="GBc-oM-4gZ">
+                    <rect key="frame" x="0.0" y="52" width="320" height="516"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="QDo-N8-GNn"/>
+                        <outlet property="delegate" destination="-1" id="azj-fi-FBg"/>
+                    </connections>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-RT-ZkF">
+                    <rect key="frame" x="0.0" y="8" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="设置" id="UIq-2O-NpK">
+                            <barButtonItem key="leftBarButtonItem" systemItem="reply" id="ipa-km-DJz">
+                                <connections>
+                                    <action selector="ReturnSetting:" destination="-1" id="vdA-Ih-jOc"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ymp-RT-ZkF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="05v-JF-RWX"/>
+                <constraint firstItem="GBc-oM-4gZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="8e4-kC-uDj"/>
+                <constraint firstItem="ymp-RT-ZkF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KI3-h8-hpb"/>
+                <constraint firstAttribute="trailing" secondItem="ymp-RT-ZkF" secondAttribute="trailing" id="KvY-kG-uIp"/>
+                <constraint firstAttribute="bottom" secondItem="GBc-oM-4gZ" secondAttribute="bottom" id="YCk-gJ-emU"/>
+                <constraint firstAttribute="trailing" secondItem="GBc-oM-4gZ" secondAttribute="trailing" id="gQU-B8-wW8"/>
+                <constraint firstItem="GBc-oM-4gZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lzD-Zs-KCm"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="232" y="325"/>
         </view>
     </objects>
 </document>

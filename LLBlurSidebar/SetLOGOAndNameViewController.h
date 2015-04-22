@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SetLOGOAndNameViewController : UIViewController
+- (IBAction)ReturnSetController:(id)sender;
+- (IBAction)ChangeSetLogoAndAppName:(id)sender;
 
 @end

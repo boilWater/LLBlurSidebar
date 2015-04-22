@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
 typedef enum {
     PasscodeActionSet,
@@ -39,6 +40,14 @@ typedef enum {
     UITextField *passcodeTextField;
     UIImageView *digitImageViews[4];
     UIImageView *snapshotImageView;
+    
+    //初始化数据库
+//    sqlite3 *db;
+//    sqlite3_stmt *stmt;
+
+    sqlite3 *db;
+    sqlite3_stmt *stmt;
+    
 }
 
 @property (readonly) PasscodeAction action;

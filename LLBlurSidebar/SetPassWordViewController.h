@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PAPasscodeViewController.h"
+@interface SetPassWordViewController : UIViewController<PAPasscodeViewControllerDelegate>
 
-@interface SetPassWordViewController : UIViewController
+- (IBAction)RuturnSetController:(UIBarButtonItem *)sender;
+- (IBAction)setPassWord:(UIBarButtonItem *)sender;
 
 @end

@@ -1,19 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteDetailController">
             <connections>
+                <outlet property="NoteDetailUITextView" destination="Y8h-bb-iee" id="v5r-Iy-wWy"/>
+                <outlet property="noteDetailContentText" destination="Y8h-bb-iee" id="PYI-ww-IZH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPd-EA-01a">
+                    <rect key="frame" x="0.0" y="8" width="320" height="44"/>
+                    <items>
+                        <navigationItem id="xHB-rs-YGE">
+                            <barButtonItem key="leftBarButtonItem" title="返回" id="XCh-ho-gKB">
+                                <connections>
+                                    <action selector="noteDetailMainLayout:" destination="-1" id="gWL-GS-Mvq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" style="plain" id="PnS-PS-sOd">
+                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="IaE-fC-DAo">
+                                    <rect key="frame" x="205" y="8" width="99" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="删除"/>
+                                        <segment title="保存"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="noteDetailSegmentedControlAddOrDeleta:" destination="-1" eventType="valueChanged" id="CTy-Ul-lQO"/>
+                                    </connections>
+                                </segmentedControl>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8h-bb-iee">
+                    <rect key="frame" x="16" y="52" width="304" height="508"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Y8h-bb-iee" secondAttribute="bottom" id="G51-yu-3Hs"/>
+                <constraint firstItem="FPd-EA-01a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QHy-AY-SNe"/>
+                <constraint firstItem="FPd-EA-01a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Z5a-7N-GQN"/>
+                <constraint firstAttribute="trailing" secondItem="Y8h-bb-iee" secondAttribute="trailing" id="eSK-fB-3cF"/>
+                <constraint firstAttribute="trailing" secondItem="FPd-EA-01a" secondAttribute="trailing" id="g84-Iv-Ya2"/>
+                <constraint firstItem="Y8h-bb-iee" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tY8-vK-eju"/>
+                <constraint firstItem="Y8h-bb-iee" firstAttribute="top" secondItem="FPd-EA-01a" secondAttribute="bottom" id="xlc-HH-orv"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
 </document>

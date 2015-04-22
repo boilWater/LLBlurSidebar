@@ -7,6 +7,7 @@
 //
 
 #import "SetPassWordViewController.h"
+//#import "PAPasscodeViewController.h"
 
 @interface SetPassWordViewController ()
 
@@ -16,22 +17,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+   
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma 返回设置的主页
+- (IBAction)RuturnSetController:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
-#pragma mark - Navigation
+#pragma 确定密码设置
+- (IBAction)setPassWord:(UIBarButtonItem *)sender {
+    PAPasscodeViewController *passcodeViewController = [[PAPasscodeViewController alloc] initForAction:PasscodeActionSet];
+    passcodeViewController.delegate = self;
+//    passcodeViewController.simple = _simpleSwitch.on;
+    [self presentViewController:passcodeViewController animated:YES completion:nil];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+#pragma mark - PAPasscodeViewControllerDelegate
+
+- (void)PAPasscodeViewControllerDidCancel:(PAPasscodeViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)PAPasscodeViewControllerDidEnterPasscode:(PAPasscodeViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:^() {
+        [[[UIAlertView alloc] initWithTitle:nil message:@"Passcode entered correctly" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }];
+}
+
+- (void)PAPasscodeViewControllerDidSetPasscode:(PAPasscodeViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:^() {
+//        _passcodeLabel.text = controller.passcode;
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"设定密码" message:@"设定成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alertView show];
+    }];
+}
+
+- (void)PAPasscodeViewControllerDidChangePasscode:(PAPasscodeViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:^() {
+//        _passcodeLabel.text = controller.passcode;
+    }];
+}
+
+- (void)viewDidUnload {
+//    [self setSimpleSwitch:nil];
+    [super viewDidUnload];
+}
 
 @end

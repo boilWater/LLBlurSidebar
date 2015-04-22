@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LanchPassWordViewController : UIViewController
+@interface LanchPassWordViewController : UIViewController{
+   
+}
+@property (weak, nonatomic) IBOutlet UITextField *EnterPassWord;
+- (IBAction)EnterMainViewController:(id)sender;
+- (IBAction)EnteViewController:(id)sender;
 
 @end

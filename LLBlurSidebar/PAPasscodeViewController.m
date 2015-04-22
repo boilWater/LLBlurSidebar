@@ -26,6 +26,16 @@
 #define TEXTFIELD_MARGIN 8
 #define SLIDE_DURATION  0.3
 
+//数据库的操作
+#define DBNAME @"personInfo2.sqlite"
+#define NAME @"name"
+#define AGE @"age"
+#define ADRESS @"adress"
+
+#define TABLENAME @"PERSOMINFO"
+#define PASSWORD @"password"
+//数据库的操作
+
 @interface PAPasscodeViewController ()
 - (void)cancel:(id)sender;
 - (void)handleFailedAttempt;
@@ -82,7 +92,7 @@
     [view addSubview:contentView];
     
     CGFloat panelWidth = DIGIT_WIDTH*4+DIGIT_SPACING*3;
-    if (_simple) {
+    if (!_simple) {
         UIView *digitPanel = [[UIView alloc] initWithFrame:CGRectMake(0, 0, panelWidth, DIGIT_HEIGHT)];
         digitPanel.frame = CGRectOffset(digitPanel.frame, (contentView.bounds.size.width-digitPanel.bounds.size.width)/2, PROMPT_HEIGHT);
         digitPanel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
@@ -103,6 +113,7 @@
         }
         passcodeTextField = [[UITextField alloc] initWithFrame:digitPanel.frame];
         passcodeTextField.hidden = YES;
+        passcodeTextField.keyboardType = UIKeyboardTypeNumberPad;
     } else {
         UIView *passcodePanel = [[UIView alloc] initWithFrame:CGRectMake(0, 0, panelWidth, DIGIT_HEIGHT)];
         passcodePanel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
@@ -123,7 +134,8 @@
     passcodeTextField.borderStyle = UITextBorderStyleNone;
     passcodeTextField.secureTextEntry = YES;
     passcodeTextField.textColor = [UIColor colorWithRed:0.23 green:0.33 blue:0.52 alpha:1.0];
-    passcodeTextField.keyboardType = UIKeyboardTypeNumberPad;
+//    passcodeTextField.keyboardType = UIKeyboardTypeNumberPad;
+//    passcodeTextField.keyboardType = UIKeyboardTypeNumberPad;
     [passcodeTextField addTarget:self action:@selector(passcodeChanged:) forControlEvents:UIControlEventEditingChanged];
     [contentView addSubview:passcodeTextField];
 
@@ -182,6 +194,25 @@
     if (_failedAttempts > 0) {
         [self showFailedAttempts];
     }
+    passcodeTextField.keyboardType = UIKeyboardTypeNumberPad;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShowOnDelay:) name:UIKeyboardWillShowNotification object:nil];
+    //初始化数据库
+    NSString *fileName = [self dataFilePath];
+    //    NSLog(@"%@",fileName);
+    
+    if (sqlite3_open([fileName UTF8String], &db) != SQLITE_OK) {
+        sqlite3_close(db);
+        
+        NSLog(@"打开数据库失败！");
+    }else{
+        //       char *err;
+        NSString *creatSQl = @"CREATE TABLE IF NOT EXISTS PERSOMINFO (ID INTEGER PRIMARY KEY AUTOINCREMENT, password INTEGER)";
+        
+        [self execSQl:creatSQl];
+        NSLog(@"建表成功！");
+        
+    }
+    //初始化数据库
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -210,6 +241,9 @@
                 [self showScreenForPhase:1 animated:YES];
             } else {
                 if ([text isEqualToString:_passcode]) {
+//保存密码到数据库，登陆查找密码如果有就跳到登陆密码界面，如果没有就直接登陆
+                    [self addPassWordIntoSQL:_passcode];
+//保存密码到数据库，登陆查找密码如果有就跳到登陆密码界面，如果没有就直接登陆
                     if ([_delegate respondsToSelector:@selector(PAPasscodeViewControllerDidSetPasscode:)]) {
                         [_delegate PAPasscodeViewControllerDidSetPasscode:self];
                     }
@@ -371,5 +405,92 @@
         }];
     }
 }
+
+- (void)keyboardWillShowOnDelay:(NSNotification *)notification
+{
+    [self performSelector:@selector(keyboardWillShow:) withObject:nil afterDelay:0];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    UIButton *doneButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 163, 106, 53)];
+    [doneButton setTitle:@"" forState:(UIControlStateNormal)];
+    [doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+    UIWindow * tempWindow = [[[UIApplication sharedApplication]windows]objectAtIndex:1];
+    UIView * keyBoard = nil;
+    NSLog(@"%@",tempWindow);
+    for (int i = 0; i < tempWindow.subviews.count; i ++) {
+        keyBoard = [tempWindow.subviews objectAtIndex:i];
+        
+        [keyBoard addSubview:doneButton];
+    }
+    
+}
+/*
+ *添加数据库并对设置的密码进行数据的操作进行储存
+ *
+ */
+//加载数据库的路径
+-(NSString *)dataFilePath{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *myDocPath = [paths objectAtIndex:0];
+    NSString *fileName = [myDocPath stringByAppendingPathComponent:DBNAME];
+    
+    NSLog(@"%@", fileName);
+    return fileName;
+}
+-(void)execSQl:(NSString *)sql
+{
+    char *err;
+    if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+        sqlite3_close(db);
+        
+        NSLog(@"建表失败！");
+    }
+}
+-(void) addPassWordIntoSQL:(NSInteger)passWord{
+    NSString *addSql = @"INSERT INTO PERSOMINFO(ID,password) VALUES(?,?)";
+    NSArray *array = [NSArray arrayWithObjects:@"4",passWord,  nil];
+    if ([self dealDate:addSql paramsarray:array] != YES) {
+        NSLog(@"添加失败！");
+    }
+    NSLog(@"添加成功！");
+
+}
+-(BOOL)dealDate:(NSString *)sql paramsarray:(NSArray *)params{
+    
+    NSString *filePath = [self dataFilePath];
+    //打开数据库
+    if (sqlite3_open([filePath UTF8String], &db) != SQLITE_OK) {
+        sqlite3_close(db);
+        NSLog(@"打开数据库失败！");
+        return NO;
+    }
+    //编译SQL的语句
+    if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, NULL) != SQLITE_OK) {
+        NSLog(@"SQL的编译失败！");
+        sqlite3_close(db);
+        return NO;
+    }
+    //绑定数据
+    for (int i = 0; i < params.count; i++) {
+        NSString *value = [params objectAtIndex:i];
+        sqlite3_bind_text(stmt, i+1, [value UTF8String], -1, NULL);
+    }
+    //执行sql的语句
+    if (sqlite3_step(stmt) == SQLITE_ERROR || sqlite3_step(stmt) == SQLITE_MISUSE) {
+        NSLog(@"执行失败！");
+        sqlite3_close(db);
+        return NO;
+    }
+    sqlite3_finalize(stmt);
+    sqlite3_close(db);
+    return YES;
+}
+
+/*
+ *添加数据库并对设置的密码进行数据的操作进行储存
+ *
+ */
 
 @end

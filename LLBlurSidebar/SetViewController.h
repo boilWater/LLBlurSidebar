@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PAPasscodeViewController.h"
+@interface SetViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,PAPasscodeViewControllerDelegate>
 
-@interface SetViewController : UIViewController
+@property (weak, nonatomic) NSArray *dataArray;
+- (IBAction)ReturnSetting:(UIBarButtonItem *)sender;
 
 @end

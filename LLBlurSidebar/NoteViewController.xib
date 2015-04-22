@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteViewController">
+            <connections>
+                <outlet property="content" destination="cLq-gh-YP4" id="iOW-Ue-bQK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VL-gT-dhu">
+                    <rect key="frame" x="0.0" y="8" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="日历备注" id="jdB-4l-vyo">
+                            <barButtonItem key="leftBarButtonItem" title="返回" id="pmv-0O-v8c">
+                                <connections>
+                                    <action selector="ReturnMainViewController:" destination="-1" id="C4D-A7-zbI"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="保存" id="QcS-X7-hDG">
+                                <connections>
+                                    <action selector="SaveCalenderContent:" destination="-1" id="kGf-g4-IKS"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLq-gh-YP4">
+                    <rect key="frame" x="0.0" y="90" width="600" height="502"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入标题" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="1Wr-0y-u6U">
+                    <rect key="frame" x="0.0" y="58" width="600" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cLq-gh-YP4" secondAttribute="trailing" id="2xS-UJ-DPP"/>
+                <constraint firstItem="cLq-gh-YP4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="89n-VG-VnE"/>
+                <constraint firstItem="8VL-gT-dhu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JMC-C8-r4C"/>
+                <constraint firstItem="8VL-gT-dhu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="OQA-bd-n1b"/>
+                <constraint firstAttribute="trailing" secondItem="8VL-gT-dhu" secondAttribute="trailing" id="OX0-6E-5FF"/>
+                <constraint firstItem="1Wr-0y-u6U" firstAttribute="trailing" secondItem="cLq-gh-YP4" secondAttribute="trailing" id="SIG-xC-QmF"/>
+                <constraint firstItem="1Wr-0y-u6U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="ZhO-Pp-2he"/>
+                <constraint firstItem="cLq-gh-YP4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m5o-GA-V97"/>
+                <constraint firstItem="1Wr-0y-u6U" firstAttribute="leading" secondItem="cLq-gh-YP4" secondAttribute="leading" id="ryh-9V-leX"/>
+                <constraint firstAttribute="bottom" secondItem="cLq-gh-YP4" secondAttribute="bottom" constant="8" id="x4d-hH-a8w"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

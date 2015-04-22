@@ -10,4 +10,8 @@
 
 @interface MainCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *noteTitle;
+@property (weak, nonatomic) IBOutlet UILabel *noteContent;
+@property (weak, nonatomic) IBOutlet UILabel *noteDate;
+
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingTableViewController : UITableViewController
+@interface SettingTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+//    NSArray *dataArray;
+}
 
+//@property (strong, nonatomic) IBOutlet UITableView *SettingTableView;
+@property (weak, nonatomic) NSArray *dataArray;
 @end

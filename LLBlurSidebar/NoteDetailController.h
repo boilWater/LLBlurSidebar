@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface NoteDetailController : UIViewController
+@property NSInteger index;
+- (IBAction)noteDetailSegmentedControlAddOrDeleta:(UISegmentedControl *)sender;
+- (IBAction)noteDetailMainLayout:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *noteDetailContentText;
+@property (weak, nonatomic) IBOutlet UITextView *NoteDetailUITextView;
 
 @end
