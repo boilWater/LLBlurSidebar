@@ -31,8 +31,6 @@
 		183815BC1AE16BB200A0F183 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183815B91AE16BB200A0F183 /* Default-568h@2x.png */; };
 		1849B76C1ADCE78C00550601 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1849B76A1ADCE78C00550601 /* MainCell.m */; };
 		1849B76D1ADCE78C00550601 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1849B76B1ADCE78C00550601 /* MainCell.xib */; };
-		18E2B9BA1AE20CD40007837C /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2B9B81AE20CD40007837C /* SettingTableViewController.m */; };
-		18E2B9BB1AE20CD40007837C /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E2B9B91AE20CD40007837C /* SettingTableViewController.xib */; };
 		18E2B9C71AE21F9B0007837C /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2B9C51AE21F9B0007837C /* SetViewController.m */; };
 		18E2B9C81AE21F9B0007837C /* SetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E2B9C61AE21F9B0007837C /* SetViewController.xib */; };
 		18E2B9CC1AE22F3E0007837C /* SetPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2B9CA1AE22F3E0007837C /* SetPassWordViewController.m */; };
@@ -69,7 +67,6 @@
 		18FC0B951AD91EA90072938A /* note_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FC0B8A1AD91EA90072938A /* note_icon.png */; };
 		18FC0B981AD931C50072938A /* note_object_shape_focus.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FC0B961AD931C50072938A /* note_object_shape_focus.png */; };
 		18FC0B991AD931C50072938A /* note_object_shape_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FC0B971AD931C50072938A /* note_object_shape_normal.png */; };
-		18FC0BA01AD932330072938A /* noteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC0B9C1AD932330072938A /* noteDetailViewController.m */; };
 		18FC0BA11AD932330072938A /* NoteBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC0B9E1AD932330072938A /* NoteBookController.m */; };
 		18FC0BA21AD932330072938A /* NoteBookController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FC0B9F1AD932330072938A /* NoteBookController.xib */; };
 		827F17D61A1DD170002968A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 827F17D51A1DD170002968A8 /* main.m */; };
@@ -131,9 +128,6 @@
 		1849B7691ADCE78C00550601 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
 		1849B76A1ADCE78C00550601 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
 		1849B76B1ADCE78C00550601 /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
-		18E2B9B71AE20CD40007837C /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
-		18E2B9B81AE20CD40007837C /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
-		18E2B9B91AE20CD40007837C /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = "<group>"; };
 		18E2B9C41AE21F9B0007837C /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		18E2B9C51AE21F9B0007837C /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		18E2B9C61AE21F9B0007837C /* SetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetViewController.xib; sourceTree = "<group>"; };
@@ -179,8 +173,6 @@
 		18FC0B8A1AD91EA90072938A /* note_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_icon.png; sourceTree = "<group>"; };
 		18FC0B961AD931C50072938A /* note_object_shape_focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_object_shape_focus.png; sourceTree = "<group>"; };
 		18FC0B971AD931C50072938A /* note_object_shape_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_object_shape_normal.png; sourceTree = "<group>"; };
-		18FC0B9B1AD932330072938A /* noteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noteDetailViewController.h; sourceTree = "<group>"; };
-		18FC0B9C1AD932330072938A /* noteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noteDetailViewController.m; sourceTree = "<group>"; };
 		18FC0B9D1AD932330072938A /* NoteBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteBookController.h; sourceTree = "<group>"; };
 		18FC0B9E1AD932330072938A /* NoteBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteBookController.m; sourceTree = "<group>"; };
 		18FC0B9F1AD932330072938A /* NoteBookController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteBookController.xib; sourceTree = "<group>"; };
@@ -228,11 +220,6 @@
 				18E2B9C91AE22F3E0007837C /* SetPassWordViewController.h */,
 				18E2B9CA1AE22F3E0007837C /* SetPassWordViewController.m */,
 				18E2B9CB1AE22F3E0007837C /* SetPassWordViewController.xib */,
-				18E2B9B91AE20CD40007837C /* SettingTableViewController.xib */,
-				18E2B9B71AE20CD40007837C /* SettingTableViewController.h */,
-				18E2B9B81AE20CD40007837C /* SettingTableViewController.m */,
-				18FC0B9B1AD932330072938A /* noteDetailViewController.h */,
-				18FC0B9C1AD932330072938A /* noteDetailViewController.m */,
 			);
 			name = Trash;
 			sourceTree = "<group>";
@@ -550,7 +537,6 @@
 				183815BC1AE16BB200A0F183 /* Default-568h@2x.png in Resources */,
 				18FC0B921AD91EA90072938A /* edit_text_align_right_expand_normal.png in Resources */,
 				18FC0B8F1AD91EA90072938A /* bg_notebook_06.png in Resources */,
-				18E2B9BB1AE20CD40007837C /* SettingTableViewController.xib in Resources */,
 				1849B76D1ADCE78C00550601 /* MainCell.xib in Resources */,
 				18E2B9E91AE2D8FB0007837C /* edit_select_paper_08.png in Resources */,
 				18FC0B8D1AD91EA90072938A /* bg_notebook_01.jpg in Resources */,
@@ -594,12 +580,10 @@
 				18EED52A1AEA49A600FA12CE /* HSDatePickerViewController.m in Sources */,
 				183273531ADA4CB50016FC31 /* NSDate+WQCalendarLogic.m in Sources */,
 				1832734D1ADA4CB50016FC31 /* CalendarViewController.m in Sources */,
-				18E2B9BA1AE20CD40007837C /* SettingTableViewController.m in Sources */,
 				183273521ADA4CB50016FC31 /* CalendarDayModel.m in Sources */,
 				1832734C1ADA4CB50016FC31 /* CalendarHomeViewController.m in Sources */,
 				18FC0BA11AD932330072938A /* NoteBookController.m in Sources */,
 				18EED5251AEA421400FA12CE /* NoteCalendarController.m in Sources */,
-				18FC0BA01AD932330072938A /* noteDetailViewController.m in Sources */,
 				1849B76C1ADCE78C00550601 /* MainCell.m in Sources */,
 				18EED5361AEA648D00FA12CE /* DetailsViewController.m in Sources */,
 				183815B61AE16B0200A0F183 /* PAPasscodeViewController.m in Sources */,
