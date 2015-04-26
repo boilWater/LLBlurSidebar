@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteCalendarController">
+            <connections>
+                <outlet property="contentCanlendar" destination="FQM-mD-MRE" id="gTQ-Sp-8y9"/>
+                <outlet property="endDateCanlendar" destination="eTp-Gp-TXq" id="ray-q7-3yu"/>
+                <outlet property="startDateCanlendar" destination="cIB-oV-Fyj" id="ixC-76-rOv"/>
+                <outlet property="titleCanlendar" destination="dVD-wi-5nk" id="76W-nK-3kE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ek-gA-Kgw">
+                    <rect key="frame" x="0.0" y="8" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="日历记事" id="xAK-r0-EFC">
+                            <barButtonItem key="leftBarButtonItem" systemItem="reply" id="M6K-Pn-CxF">
+                                <connections>
+                                    <action selector="returnCalendarViewController:" destination="-1" id="Ixm-h4-5s1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" style="plain" id="Q2c-q9-XtE">
+                                <segmentedControl key="customView" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="rwy-p9-cLE">
+                                    <rect key="frame" x="229" y="7" width="76" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="详细"/>
+                                        <segment title="保存"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="detailAndSaveSegmentedControl:" destination="-1" eventType="valueChanged" id="EUS-O9-ORf"/>
+                                    </connections>
+                                </segmentedControl>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="记事标题" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVD-wi-5nk">
+                    <rect key="frame" x="8" y="133" width="398" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-mD-MRE">
+                    <rect key="frame" x="0.0" y="171" width="414" height="565"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIB-oV-Fyj">
+                    <rect key="frame" x="42" y="52" width="364" height="32"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startDateCanlendar:" destination="-1" eventType="touchUpInside" id="5lW-BB-hYR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-Gp-TXq">
+                    <rect key="frame" x="42" y="99" width="364" height="33"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="endDateCanlendar:" destination="-1" eventType="touchUpInside" id="EfX-Y2-J2A"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="从：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-4y-8zj">
+                    <rect key="frame" x="0.0" y="56" width="42" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="到：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-rz-fur">
+                    <rect key="frame" x="0.0" y="92" width="42" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91b-rF-2OM">
+                    <rect key="frame" x="50" y="86" width="270" height="2"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-Vo-RUa">
+                    <rect key="frame" x="50" y="124" width="270" height="2"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dVD-wi-5nk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="133" id="1dj-li-6cB"/>
+                <constraint firstAttribute="bottom" secondItem="FQM-mD-MRE" secondAttribute="bottom" id="3Gv-FD-HES"/>
+                <constraint firstAttribute="trailing" secondItem="cIB-oV-Fyj" secondAttribute="trailing" constant="8" id="6Ad-rB-sXT"/>
+                <constraint firstItem="Y2d-rz-fur" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="92" id="77u-DM-s5W"/>
+                <constraint firstItem="3Ek-gA-Kgw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="8SR-za-qxj"/>
+                <constraint firstItem="FQM-mD-MRE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AdI-p6-QR1"/>
+                <constraint firstItem="eTp-Gp-TXq" firstAttribute="leading" secondItem="Y2d-rz-fur" secondAttribute="trailing" id="BfE-ed-IDh"/>
+                <constraint firstItem="cIB-oV-Fyj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="LFx-8p-udc"/>
+                <constraint firstItem="eTp-Gp-TXq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="42" id="QUy-fu-FMB"/>
+                <constraint firstItem="Fbb-4y-8zj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UQc-Nq-4PE"/>
+                <constraint firstItem="cIB-oV-Fyj" firstAttribute="leading" secondItem="Fbb-4y-8zj" secondAttribute="trailing" id="WVs-KN-xiS"/>
+                <constraint firstAttribute="trailing" secondItem="FQM-mD-MRE" secondAttribute="trailing" id="gGu-Y3-yOv"/>
+                <constraint firstAttribute="trailing" secondItem="eTp-Gp-TXq" secondAttribute="trailing" constant="8" id="gXZ-Mb-f6o"/>
+                <constraint firstItem="Fbb-4y-8zj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="iJg-BH-Eea"/>
+                <constraint firstAttribute="trailing" secondItem="dVD-wi-5nk" secondAttribute="trailing" constant="8" id="iad-0X-vLA"/>
+                <constraint firstItem="cIB-oV-Fyj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="42" id="lr1-Pb-WVi"/>
+                <constraint firstItem="eTp-Gp-TXq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="92" id="n8Q-zK-RbZ"/>
+                <constraint firstItem="Y2d-rz-fur" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oKq-WG-LgT"/>
+                <constraint firstItem="eTp-Gp-TXq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="oTr-Dg-Dt5"/>
+                <constraint firstItem="cIB-oV-Fyj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="pCV-pd-73f"/>
+                <constraint firstItem="FQM-mD-MRE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="171" id="raB-nc-V8e"/>
+                <constraint firstAttribute="trailing" secondItem="3Ek-gA-Kgw" secondAttribute="trailing" id="u1M-zx-lce"/>
+                <constraint firstItem="3Ek-gA-Kgw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uk9-dN-ZZi"/>
+                <constraint firstItem="dVD-wi-5nk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="xWw-kK-AYE"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="pCV-pd-73f"/>
+                    <exclude reference="oTr-Dg-Dt5"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="381" y="334"/>
+        </view>
+    </objects>
+</document>

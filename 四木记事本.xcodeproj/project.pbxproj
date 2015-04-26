@@ -19,8 +19,6 @@
 		183273521ADA4CB50016FC31 /* CalendarDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183273471ADA4CB50016FC31 /* CalendarDayModel.m */; };
 		183273531ADA4CB50016FC31 /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 183273491ADA4CB50016FC31 /* NSDate+WQCalendarLogic.m */; };
 		183273541ADA4CB50016FC31 /* chack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1832734B1ADA4CB50016FC31 /* chack.png */; };
-		183273631ADA69120016FC31 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183273611ADA69120016FC31 /* NoteViewController.m */; };
-		183273641ADA69120016FC31 /* NoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183273621ADA69120016FC31 /* NoteViewController.xib */; };
 		183815AD1AE16AD400A0F183 /* papasscode_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 183815A71AE16AD400A0F183 /* papasscode_background.png */; };
 		183815AE1AE16AD400A0F183 /* papasscode_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183815A81AE16AD400A0F183 /* papasscode_background@2x.png */; };
 		183815AF1AE16AD400A0F183 /* papasscode_failed_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 183815A91AE16AD400A0F183 /* papasscode_failed_bg.png */; };
@@ -48,6 +46,16 @@
 		18E2B9E81AE2D8FB0007837C /* edit_select_paper_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2B9E61AE2D8FB0007837C /* edit_select_paper_02.png */; };
 		18E2B9E91AE2D8FB0007837C /* edit_select_paper_08.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2B9E71AE2D8FB0007837C /* edit_select_paper_08.png */; };
 		18E2B9EF1AE2DBB70007837C /* notebook_detailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2B9EE1AE2DBB70007837C /* notebook_detailbg.png */; };
+		18EED5251AEA421400FA12CE /* NoteCalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EED5231AEA421400FA12CE /* NoteCalendarController.m */; };
+		18EED5261AEA421400FA12CE /* NoteCalendarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EED5241AEA421400FA12CE /* NoteCalendarController.xib */; };
+		18EED52A1AEA49A600FA12CE /* HSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EED5281AEA49A600FA12CE /* HSDatePickerViewController.m */; };
+		18EED52B1AEA49A600FA12CE /* HSDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EED5291AEA49A600FA12CE /* HSDatePickerViewController.xib */; };
+		18EED52D1AEA51DB00FA12CE /* bg_note_tool_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EED52C1AEA51DB00FA12CE /* bg_note_tool_line.png */; };
+		18EED5311AEA61A200FA12CE /* CalendarDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EED52F1AEA61A200FA12CE /* CalendarDetailsViewController.m */; };
+		18EED5321AEA61A200FA12CE /* CalendarDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EED5301AEA61A200FA12CE /* CalendarDetailsViewController.xib */; };
+		18EED5361AEA648D00FA12CE /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EED5341AEA648D00FA12CE /* DetailsViewController.m */; };
+		18EED5371AEA648D00FA12CE /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EED5351AEA648D00FA12CE /* DetailsViewController.xib */; };
+		18EED5391AEA9C4F00FA12CE /* simu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18EED5381AEA9C4F00FA12CE /* simu.jpg */; };
 		18FC0B8B1AD91EA90072938A /* bg_drawing_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18FC0B801AD91EA90072938A /* bg_drawing_01.jpg */; };
 		18FC0B8C1AD91EA90072938A /* bg_drawing_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18FC0B811AD91EA90072938A /* bg_drawing_02.jpg */; };
 		18FC0B8D1AD91EA90072938A /* bg_notebook_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18FC0B821AD91EA90072938A /* bg_notebook_01.jpg */; };
@@ -108,9 +116,6 @@
 		183273491ADA4CB50016FC31 /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
 		1832734A1ADA4CB50016FC31 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		1832734B1ADA4CB50016FC31 /* chack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chack.png; path = ../chack.png; sourceTree = "<group>"; };
-		183273601ADA69120016FC31 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
-		183273611ADA69120016FC31 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
-		183273621ADA69120016FC31 /* NoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteViewController.xib; sourceTree = "<group>"; };
 		183815A71AE16AD400A0F183 /* papasscode_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papasscode_background.png; sourceTree = "<group>"; };
 		183815A81AE16AD400A0F183 /* papasscode_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "papasscode_background@2x.png"; sourceTree = "<group>"; };
 		183815A91AE16AD400A0F183 /* papasscode_failed_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papasscode_failed_bg.png; sourceTree = "<group>"; };
@@ -147,6 +152,20 @@
 		18E2B9E61AE2D8FB0007837C /* edit_select_paper_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_select_paper_02.png; sourceTree = "<group>"; };
 		18E2B9E71AE2D8FB0007837C /* edit_select_paper_08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_select_paper_08.png; sourceTree = "<group>"; };
 		18E2B9EE1AE2DBB70007837C /* notebook_detailbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notebook_detailbg.png; sourceTree = "<group>"; };
+		18EED5221AEA421400FA12CE /* NoteCalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteCalendarController.h; sourceTree = "<group>"; };
+		18EED5231AEA421400FA12CE /* NoteCalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteCalendarController.m; sourceTree = "<group>"; };
+		18EED5241AEA421400FA12CE /* NoteCalendarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCalendarController.xib; sourceTree = "<group>"; };
+		18EED5271AEA49A600FA12CE /* HSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDatePickerViewController.h; sourceTree = "<group>"; };
+		18EED5281AEA49A600FA12CE /* HSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDatePickerViewController.m; sourceTree = "<group>"; };
+		18EED5291AEA49A600FA12CE /* HSDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSDatePickerViewController.xib; sourceTree = "<group>"; };
+		18EED52C1AEA51DB00FA12CE /* bg_note_tool_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_note_tool_line.png; sourceTree = "<group>"; };
+		18EED52E1AEA61A200FA12CE /* CalendarDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDetailsViewController.h; sourceTree = "<group>"; };
+		18EED52F1AEA61A200FA12CE /* CalendarDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDetailsViewController.m; sourceTree = "<group>"; };
+		18EED5301AEA61A200FA12CE /* CalendarDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarDetailsViewController.xib; sourceTree = "<group>"; };
+		18EED5331AEA648D00FA12CE /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		18EED5341AEA648D00FA12CE /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		18EED5351AEA648D00FA12CE /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		18EED5381AEA9C4F00FA12CE /* simu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = simu.jpg; sourceTree = "<group>"; };
 		18FC0B801AD91EA90072938A /* bg_drawing_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_drawing_01.jpg; sourceTree = "<group>"; };
 		18FC0B811AD91EA90072938A /* bg_drawing_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_drawing_02.jpg; sourceTree = "<group>"; };
 		18FC0B821AD91EA90072938A /* bg_notebook_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_notebook_01.jpg; sourceTree = "<group>"; };
@@ -246,9 +265,18 @@
 		1832735A1ADA64440016FC31 /* AddRemarks */ = {
 			isa = PBXGroup;
 			children = (
-				183273601ADA69120016FC31 /* NoteViewController.h */,
-				183273611ADA69120016FC31 /* NoteViewController.m */,
-				183273621ADA69120016FC31 /* NoteViewController.xib */,
+				18EED5271AEA49A600FA12CE /* HSDatePickerViewController.h */,
+				18EED5281AEA49A600FA12CE /* HSDatePickerViewController.m */,
+				18EED5291AEA49A600FA12CE /* HSDatePickerViewController.xib */,
+				18EED5221AEA421400FA12CE /* NoteCalendarController.h */,
+				18EED5231AEA421400FA12CE /* NoteCalendarController.m */,
+				18EED5241AEA421400FA12CE /* NoteCalendarController.xib */,
+				18EED52E1AEA61A200FA12CE /* CalendarDetailsViewController.h */,
+				18EED52F1AEA61A200FA12CE /* CalendarDetailsViewController.m */,
+				18EED5301AEA61A200FA12CE /* CalendarDetailsViewController.xib */,
+				18EED5331AEA648D00FA12CE /* DetailsViewController.h */,
+				18EED5341AEA648D00FA12CE /* DetailsViewController.m */,
+				18EED5351AEA648D00FA12CE /* DetailsViewController.xib */,
 			);
 			name = AddRemarks;
 			sourceTree = "<group>";
@@ -289,6 +317,8 @@
 		18FC0B7F1AD91E950072938A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				18EED5381AEA9C4F00FA12CE /* simu.jpg */,
+				18EED52C1AEA51DB00FA12CE /* bg_note_tool_line.png */,
 				18E2B9EE1AE2DBB70007837C /* notebook_detailbg.png */,
 				18E2B9E61AE2D8FB0007837C /* edit_select_paper_02.png */,
 				18E2B9E71AE2D8FB0007837C /* edit_select_paper_08.png */,
@@ -509,7 +539,6 @@
 				18FC0B991AD931C50072938A /* note_object_shape_normal.png in Resources */,
 				18FC0B8B1AD91EA90072938A /* bg_drawing_01.jpg in Resources */,
 				18FC0B981AD931C50072938A /* note_object_shape_focus.png in Resources */,
-				183273641ADA69120016FC31 /* NoteViewController.xib in Resources */,
 				18FC0B911AD91EA90072938A /* edit_text_align_right_expand_focus.png in Resources */,
 				827F17DF1A1DD170002968A8 /* Main.storyboard in Resources */,
 				18E2B9E81AE2D8FB0007837C /* edit_select_paper_02.png in Resources */,
@@ -525,17 +554,23 @@
 				1849B76D1ADCE78C00550601 /* MainCell.xib in Resources */,
 				18E2B9E91AE2D8FB0007837C /* edit_select_paper_08.png in Resources */,
 				18FC0B8D1AD91EA90072938A /* bg_notebook_01.jpg in Resources */,
+				18EED5391AEA9C4F00FA12CE /* simu.jpg in Resources */,
 				18E2B9E21AE2C18C0007837C /* LanchPassWordViewController.xib in Resources */,
 				18FC0B901AD91EA90072938A /* bg_notebook_08.png in Resources */,
 				18FC0B941AD91EA90072938A /* ic_notes.png in Resources */,
+				18EED5371AEA648D00FA12CE /* DetailsViewController.xib in Resources */,
+				18EED5261AEA421400FA12CE /* NoteCalendarController.xib in Resources */,
+				18EED52B1AEA49A600FA12CE /* HSDatePickerViewController.xib in Resources */,
 				18FC0B8C1AD91EA90072938A /* bg_drawing_02.jpg in Resources */,
 				18E2B9C81AE21F9B0007837C /* SetViewController.xib in Resources */,
 				183815B01AE16AD400A0F183 /* papasscode_failed_bg@2x.png in Resources */,
 				18E2B9EF1AE2DBB70007837C /* notebook_detailbg.png in Resources */,
 				183815AD1AE16AD400A0F183 /* papasscode_background.png in Resources */,
+				18EED5321AEA61A200FA12CE /* CalendarDetailsViewController.xib in Resources */,
 				1804A8661ADC1F040026A734 /* NoteDetailController.xib in Resources */,
 				183815B21AE16AD400A0F183 /* papasscode_marker@2x.png in Resources */,
 				827F17E41A1DD170002968A8 /* LaunchScreen.xib in Resources */,
+				18EED52D1AEA51DB00FA12CE /* bg_note_tool_line.png in Resources */,
 				18E2B9CD1AE22F3E0007837C /* SetPassWordViewController.xib in Resources */,
 				827F17E11A1DD170002968A8 /* Images.xcassets in Resources */,
 			);
@@ -556,16 +591,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				827F18001A1DD4C4002968A8 /* SidebarViewController.m in Sources */,
-				183273631ADA69120016FC31 /* NoteViewController.m in Sources */,
+				18EED52A1AEA49A600FA12CE /* HSDatePickerViewController.m in Sources */,
 				183273531ADA4CB50016FC31 /* NSDate+WQCalendarLogic.m in Sources */,
 				1832734D1ADA4CB50016FC31 /* CalendarViewController.m in Sources */,
 				18E2B9BA1AE20CD40007837C /* SettingTableViewController.m in Sources */,
 				183273521ADA4CB50016FC31 /* CalendarDayModel.m in Sources */,
 				1832734C1ADA4CB50016FC31 /* CalendarHomeViewController.m in Sources */,
 				18FC0BA11AD932330072938A /* NoteBookController.m in Sources */,
+				18EED5251AEA421400FA12CE /* NoteCalendarController.m in Sources */,
 				18FC0BA01AD932330072938A /* noteDetailViewController.m in Sources */,
 				1849B76C1ADCE78C00550601 /* MainCell.m in Sources */,
+				18EED5361AEA648D00FA12CE /* DetailsViewController.m in Sources */,
 				183815B61AE16B0200A0F183 /* PAPasscodeViewController.m in Sources */,
+				18EED5311AEA61A200FA12CE /* CalendarDetailsViewController.m in Sources */,
 				1832734E1ADA4CB50016FC31 /* CalendarMonthCollectionViewLayout.m in Sources */,
 				18E2B9CC1AE22F3E0007837C /* SetPassWordViewController.m in Sources */,
 				1832734F1ADA4CB50016FC31 /* CalendarMonthHeaderView.m in Sources */,
@@ -704,6 +742,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LLBlurSidebar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "四木记事本";
 			};
@@ -714,6 +753,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LLBlurSidebar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "四木记事本";
 			};

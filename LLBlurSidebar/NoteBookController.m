@@ -24,7 +24,7 @@
 //    backGround.image = [UIImage imageNamed:@"bg_drawing_02"];
 //    backGround.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 //    [self.view addSubview:backGround];
-    UIImage *backGround = [UIImage imageNamed:@"notebook_detailbg"];
+    UIImage *backGround = [UIImage imageNamed:@"simu"];
     [backGround drawInRect:CGRectMake(0, 97, self.view.frame.size.width, self.view.frame.size.height)];
     [_noteContent setBackgroundColor:[UIColor colorWithPatternImage:backGround]];
 //    _backGround.image = [UIImage imageNamed:@"bg_notebook_08"];
@@ -49,7 +49,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:initTitleArray forKey:@"title"];
     }
     NSArray *tempTitleArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"title"];
-    NSMutableArray *mutableTitleNoteArray = [tempNoteArray mutableCopy];
+    NSMutableArray *mutableTitleNoteArray = [tempTitleArray mutableCopy];
     NSString *textstring3 = [_noteTitle text];
     [mutableTitleNoteArray insertObject:textstring3 atIndex:0 ];
     ViewController *rootctrl2 = [[ViewController alloc]init];

@@ -17,7 +17,7 @@
 #import "CalendarDayCell.h"
 //MODEL
 #import "CalendarDayModel.h"
-#import "NoteViewController.h"
+#import "NoteCalendarController.h"
 
 @interface CalendarViewController ()
 <UICollectionViewDataSource,UICollectionViewDelegate>
@@ -161,10 +161,8 @@ static NSString *DayCell = @"DayCell";
         if (self.calendarblock) {
             
             self.calendarblock(model);//传递数组给上级
-            //传递数据到笔记注册
-            NSLog(@"%@",[model toString]);
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"myNotification" object:[model getWeek]];
-            
+//            NSLog(@"%@",[model getWeek]);
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"myNotification" object:model];
             timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
         }
         [self.collectionView reloadData];
@@ -186,10 +184,10 @@ static NSString *DayCell = @"DayCell";
     [timer invalidate];//定时器无效
     
     timer = nil;
-    NoteViewController *noteviewController = [[NoteViewController alloc] init];
-    [self presentViewController:noteviewController animated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
     
-//    [self.navigationController popViewControllerAnimated:YES];
+    NoteCalendarController *noteviewController = [[NoteCalendarController alloc] init];
+    [self presentViewController:noteviewController animated:YES completion:nil];
 }
 
 

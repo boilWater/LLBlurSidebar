@@ -63,6 +63,26 @@
 
             break;
         }
+        case 2:{
+            NSLog(@"点击导出！");
+            //获取手机的home文件夹
+            NSString *homePath =  NSHomeDirectory();
+            //得到操作当前的时间
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init ];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+            NSDate *now = [NSDate date];
+            NSString *datestring = [dateFormatter stringFromDate:now];
+            NSString *filePath = [homePath stringByAppendingFormat:[@"/" stringByAppendingFormat:datestring]];
+            NSLog(@"%@,%@", homePath, filePath);
+            
+            NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:filePath];
+            [fileHandle seekToEndOfFile];
+            NSString *textstring = [_noteDetailContentText text];
+//            NSString *textStringUTF_8 = [textstring dataUsingEncoding:NSUTF8StringEncoding];
+            [fileHandle writeData:textstring];
+            [fileHandle closeFile];
+            break;
+        }
         default:
             break;
     }
