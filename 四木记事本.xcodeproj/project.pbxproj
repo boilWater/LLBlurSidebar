@@ -31,6 +31,8 @@
 		183815BC1AE16BB200A0F183 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183815B91AE16BB200A0F183 /* Default-568h@2x.png */; };
 		1849B76C1ADCE78C00550601 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1849B76A1ADCE78C00550601 /* MainCell.m */; };
 		1849B76D1ADCE78C00550601 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1849B76B1ADCE78C00550601 /* MainCell.xib */; };
+		1892B3B11AF13538004B939C /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892B3AF1AF13538004B939C /* TodayViewController.m */; };
+		1892B3B21AF13538004B939C /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1892B3B01AF13538004B939C /* TodayViewController.xib */; };
 		18E2B9C71AE21F9B0007837C /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2B9C51AE21F9B0007837C /* SetViewController.m */; };
 		18E2B9C81AE21F9B0007837C /* SetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E2B9C61AE21F9B0007837C /* SetViewController.xib */; };
 		18E2B9CC1AE22F3E0007837C /* SetPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2B9CA1AE22F3E0007837C /* SetPassWordViewController.m */; };
@@ -128,6 +130,9 @@
 		1849B7691ADCE78C00550601 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
 		1849B76A1ADCE78C00550601 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
 		1849B76B1ADCE78C00550601 /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		1892B3AE1AF13538004B939C /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		1892B3AF1AF13538004B939C /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		1892B3B01AF13538004B939C /* TodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
 		18E2B9C41AE21F9B0007837C /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		18E2B9C51AE21F9B0007837C /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		18E2B9C61AE21F9B0007837C /* SetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetViewController.xib; sourceTree = "<group>"; };
@@ -264,6 +269,9 @@
 				18EED5331AEA648D00FA12CE /* DetailsViewController.h */,
 				18EED5341AEA648D00FA12CE /* DetailsViewController.m */,
 				18EED5351AEA648D00FA12CE /* DetailsViewController.xib */,
+				1892B3AE1AF13538004B939C /* TodayViewController.h */,
+				1892B3AF1AF13538004B939C /* TodayViewController.m */,
+				1892B3B01AF13538004B939C /* TodayViewController.xib */,
 			);
 			name = AddRemarks;
 			sourceTree = "<group>";
@@ -548,6 +556,7 @@
 				18EED5261AEA421400FA12CE /* NoteCalendarController.xib in Resources */,
 				18EED52B1AEA49A600FA12CE /* HSDatePickerViewController.xib in Resources */,
 				18FC0B8C1AD91EA90072938A /* bg_drawing_02.jpg in Resources */,
+				1892B3B21AF13538004B939C /* TodayViewController.xib in Resources */,
 				18E2B9C81AE21F9B0007837C /* SetViewController.xib in Resources */,
 				183815B01AE16AD400A0F183 /* papasscode_failed_bg@2x.png in Resources */,
 				18E2B9EF1AE2DBB70007837C /* notebook_detailbg.png in Resources */,
@@ -576,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1892B3B11AF13538004B939C /* TodayViewController.m in Sources */,
 				827F18001A1DD4C4002968A8 /* SidebarViewController.m in Sources */,
 				18EED52A1AEA49A600FA12CE /* HSDatePickerViewController.m in Sources */,
 				183273531ADA4CB50016FC31 /* NSDate+WQCalendarLogic.m in Sources */,

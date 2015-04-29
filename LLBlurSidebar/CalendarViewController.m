@@ -18,6 +18,7 @@
 //MODEL
 #import "CalendarDayModel.h"
 #import "NoteCalendarController.h"
+#import "TodayViewController.h"
 
 @interface CalendarViewController ()
 <UICollectionViewDataSource,UICollectionViewDelegate>
@@ -186,8 +187,10 @@ static NSString *DayCell = @"DayCell";
     timer = nil;
     [self.navigationController popViewControllerAnimated:YES];
     
-    NoteCalendarController *noteviewController = [[NoteCalendarController alloc] init];
-    [self presentViewController:noteviewController animated:YES completion:nil];
+//    NoteCalendarController *noteviewController = [[NoteCalendarController alloc] init];
+//    [self presentViewController:noteviewController animated:YES completion:nil];
+    TodayViewController *todayViewController = [[TodayViewController alloc] init];
+    [self presentViewController:todayViewController animated:YES completion:nil];
 }
 
 
